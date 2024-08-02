@@ -1,0 +1,776 @@
+@font-face {
+    font-family: neu;
+    src: url(./NHaasGroteskTXPro-55Rg.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:neu;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{ 
+    position: relative;
+    z-index: 10;
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+#nav{
+    padding: 2vw 0vw;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: relative;
+    z-index: 100;
+  
+} 
+
+#nav h3{
+    display: none;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-weight: 500;
+    color:#000000bb;
+    font-size: 18px;
+    position: relative;
+    transition: all ease 0.3s;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after{
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: #000;
+   left:0;
+   bottom: -100%;
+   border-radius: 50px;
+   transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0%;
+}
+
+#nav-part2 h4 a{
+    text-decoration: none;
+    color:#000000bb;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-part2 h4:hover a{
+    color: white;
+}
+
+#center{
+    height: 65vh;
+    width: 100%;
+    /*background-color: orange;*/
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom:1px solid #0000003c;
+    padding-bottom: 2vw;
+}
+
+#left h3{ 
+    width: 28vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+  
+}
+
+#center h1{
+    font-size: 10vw;
+    line-height: 8vw ;
+    text-align: right;
+}
+
+#page1 video{
+    position: relative;
+    width:100%;
+    border-radius: 25px;
+    margin-top: 4vw;
+}
+
+#page2{
+    min-height: 100vh;
+    width:100%;
+    background-color: #EFEAE3;
+    padding: 7.5vw 0;
+    position: relative;
+}
+
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display:inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+  /*  background-color: aqua; */
+
+}
+
+#circle{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #FE330A;
+    display: inline-block;
+    margin: 1vw 17.5px;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/*page 2 bottom*/
+
+.page2-bottom{
+    height : 80vh;
+    width:100%;
+    padding: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+    
+}
+
+.page2-bottom h1{
+    font-size: 3.5vw;
+    width: 60%;
+    line-height: 4vw;
+}
+
+.bottom-part2{
+    width:20%;
+    margin-top: 3vw;
+}
+.bottom-part2 img{
+    margin-top: 5vw;
+    width:100%;
+    border-radius: 15px;
+}
+
+.bottom-part2 p{
+    font-size: 15px;
+    font-weight: 200;
+    font-family: Neuehaasdisplay roman, sans-serif;
+    margin-top: 2vw;
+}
+
+.blurrycircle{
+    height: 31vw;
+    width:31vw;
+    position:absolute;/* i have given parent class page2 position:relative*/
+    background:linear-gradient(to top right, #FE320A , #e6711e);
+    border-radius: 50%;
+    top:60%;
+    left:21%;
+    filter: blur(20px); 
+    
+    animation-name: blurshape;
+    animation-duration: 5s;
+    animation-timing-function:ease-in-out   ;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blurshape {
+    from{
+        filter: blur(20px);
+       transform: translate(10% , -10%) skew(0);
+    }
+    to{
+        filter:blur(30px) ;
+    transform: translate(-10% , 10%) skew(-12deg);
+    }
+}
+
+.page-3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding:3vw 0;
+}
+
+.elem{
+    height:140px;
+    width: 100%;
+    border-bottom:1px solid #0000002e ;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    overflow: hidden;
+    margin-top: 22px;
+}
+
+.elem h2{
+    font-size: 47px;
+    position: relative;
+    z-index: 9;/*we can see converse soho above the colour*/
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    left:0;
+    top:-100%;
+    transition: all ease 0.3s;
+}
+
+.elem:hover .overlay{
+    top:0;
+}
+
+.fixed-image{
+   height:30vw;
+   width: 24vw;
+   border-radius: 10px;
+   position: fixed;
+   z-index:99;
+   left:50%;
+   top:26%;
+   display: none;
+   background-size: cover;
+   background-position: center;
+}
+
+
+/* For Swiper Part */
+.page-4{
+    height: 70vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 9vw 2vw;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    width: 30%;
+    border-left: 1px solid rgba(112, 112, 112, 0.863);
+    padding: 0 1vw ;
+  }
+
+.swiper-slide p{
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+
+
+/* For footer part */
+.page-5{
+    height: 100vh;
+    width:100%;
+}
+
+.footer{
+    position: fixed; /* position fixed main class me kaam ni krti islie footer ko 
+    html me body tag ke end me bnaya hu*/
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.footer h1{
+    font-size: 22.5vw;
+}
+
+.footer-abovepart{
+    height: 28vh;
+    width: 100%;
+    background-color: #FE320A;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+
+.footer-bottompart{
+    border-top:1px solid #dadada7c;
+    height: 10vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 1vw;
+}
+.footer-bottompart h5{
+    font-size: 16px;
+}
+
+.part-1{
+    padding-top: 3.5vw;
+    padding-left: 4vw;
+}
+.part-1 h4{
+    font-size: 22px;
+    color:#EFEAE3;
+}
+
+.part-2{
+    padding:5vw 3vw ;
+}
+
+.part-2 p{
+    margin-top: 35px;
+    color:#EFEAE3;
+    font-size: 18px;
+}
+
+#full-scr{
+    height: 100vh;
+    width: 100%;
+    background-color: #00000070;
+    position: fixed;
+    z-index: 99;
+    top:-100%;
+    transition: all ease 0.5s;
+}
+
+.full-div1{
+    height: 50%;
+    width: 100%;
+    background-color: #EFEAE3 ;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; 
+    position:absolute;  
+    overflow: hidden;
+
+}
+
+.full-div1 h1{
+    text-align: right;
+    display: block;
+    border-style:none ;
+    border-radius: 0;
+
+}
+
+
+/*-- Responsive Website --*/
+
+@media (max-width:600px) {
+    #page1{
+        min-height: 100vh;
+        width: 100vw;
+        padding: 0 0px;
+    }
+    
+    #nav{
+        padding: 8vw 5vw;
+        background-color: #EFEAE3;
+    }
+
+    #nav img{
+        height: 9vh;
+        transition: all ease 0.2s;
+    }
+    
+    #nav-part2{
+        display: none;
+    }
+    
+    #nav h3{
+        display: block;
+        padding:3vw 5vw;
+        padding-left: 6vw;
+        border: 1px solid #ababab;
+        border-radius: 50px;
+        font-weight: 200;
+        font-size: 4vw;   
+    }
+
+    #center{
+        height: 62vh;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom:1px solid #0000003c;
+        padding-bottom: 8vw;
+        flex-direction: column-reverse; 
+        padding: 7vw 4vw; ;
+    }
+    
+    #left h3{ 
+        width: 80%;
+        font-size: 5.5vw;
+        line-height: 6vw;
+    }
+    
+    #center h1{
+        font-size: 17vw;
+        line-height: 15vw ;
+        text-align: right;
+    }
+    
+    #page1 video{
+        position: relative;
+        height: 70vh;
+        width:92%;
+        object-fit: cover;
+        margin-left: 4%;
+        border-radius: 25px;
+        margin-top: 4vw;
+    }
+    #page2{
+        min-height: 100vh;
+        width:100%;
+        background-color: #EFEAE3;
+        padding: 7vw 0;
+        position: relative;
+    }
+    
+    #moving-text{
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    #moving-text::-webkit-scrollbar{
+        display: none;
+    }
+    .con{
+        white-space: nowrap;
+        display:inline-block;
+        animation-name: move;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    #moving-text h1{
+        font-size: 14vw;
+        display: inline-block;
+      /*  background-color: aqua; */
+    
+    }
+    
+    #circle{
+        height: 26px;
+        width: 26px;
+        border-radius: 50%;
+        background-color: #FE330A;
+        display: inline-block;
+        margin: 2vw 18px;
+        }
+
+    
+    /*page 2 bottom*/
+    
+    .page2-bottom{
+        height : 90vh;
+        width:100%;
+        padding: 9vw 2vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        position: relative;
+        z-index: 9;
+        margin-top:  30vw ;
+        
+    }
+    
+    .page2-bottom h1{
+        font-size: 8.2vw;
+        width: 100%;
+        line-height: 9vw;
+    }
+    
+    .bottom-part2{
+        width:50%;
+        margin-top: 3vw;
+    }
+    .bottom-part2 img{
+   
+        width:100%;
+        border-radius: 10px;
+    }
+    
+    .bottom-part2 p{
+        font-size: 3.5vw;
+        font-weight: 200;
+        font-family: Neuehaasdisplay roman, sans-serif;
+        margin-top: 1.5vw;
+    }
+    
+    .blurrycircle{
+        height: 62vw;
+        width:62vw;
+        position:absolute;/* i have given parent class page2 position:relative*/
+        background:linear-gradient(to top right, #FE320A , #e6711e);
+        border-radius: 50%;
+        top: 58%;
+        left:29%;
+        filter: blur(20px); 
+        
+        animation-name: blurshape;
+        animation-duration: 6s;
+        animation-timing-function:ease-in-out   ;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+    
+    .page-3{
+        min-height: 100vh;
+        width: 100%;
+        background-color: #EFEAE3;
+        padding:7vw 0;
+    }
+    
+    .elem{
+        height:140px;
+        width: 100%;
+        border-bottom:1px solid #0000002e ;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 28px;
+        overflow: hidden;
+        margin-top: 22px;
+    }
+    
+    .elem h2{
+        font-size: 44px;
+        position: relative;
+        z-index: 9;/*we can see converse soho above the colour*/
+    }
+    
+    .overlay{
+        height: 100%;
+        width: 100%;
+        background-color: #FF9831;
+        position: absolute;
+        left:0;
+        top:-100%;
+        transition: all ease 0.3s;
+    }
+    
+    .elem:hover .overlay{
+        top:0;
+    }
+    
+    .fixed-image{
+       height: 55vw;
+       width: 30vw;
+       border-radius: 10px;
+       position: fixed;
+       z-index:99;
+       left: 63%;
+       top: 24%;
+       display: none;
+       background-size: cover;
+       background-position: center;
+    }
+    
+
+    .page-4{
+        height: 70vh;
+        width: 100%;
+        background-color: #EFEAE3;
+        padding: 9vw 5vw;
+    }
+    
+    
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+    
+    .swiper-slide {
+        width: 30%;
+        border-left: 1px solid rgba(112, 112, 112, 0.863);
+        padding: 0 1vw ;
+      }
+    
+    .swiper-slide p{
+        font-size: 11.5px;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+    
+    .page-5{
+        height: 100vh;
+        width:100%;
+    }
+    
+    .footer{
+        position: fixed; /* position fixed main class me kaam ni krti islie footer ko 
+        html me body tag ke end me bnaya hu*/
+        z-index: 9;
+        height: 100vh;
+        width: 100%;
+        background-color: #000;
+        color: white;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    
+    .footer h1{
+        font-size: 23vw;
+    }
+    
+    .footer-abovepart{
+        height: 35vh;
+        width: 100%;
+        background-color: #FE320A;
+        display: flex;
+        align-items:flex-start;
+        justify-content:space-between;
+        flex-direction: column;
+    }
+    
+    
+    .footer-bottompart{
+        border-top:1px solid #dadada7c;
+        height: 30vh;
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1vw 1vw;
+    }
+
+
+    .footer-bottompart h5{
+        font-size: 12.4px;
+    }
+    
+    .part-1{
+        padding-top: 3.5vw;
+        padding-left: 4vw;
+    }
+    .part-1 h4{
+        font-size: 22px;
+        color:#EFEAE3;
+    }
+    
+    .part-2{
+        padding:5vw 3vw ;
+    }
+    
+    .part-2 p{
+        margin-top: 35px;
+        color:#EFEAE3;
+        font-size: 18px;
+    }
+    
+}
+
+/*--For Loader Part --- */
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,orange,orangered);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+    #loader h1{
+        font-size: 9vw;
+      
+    }
+}
